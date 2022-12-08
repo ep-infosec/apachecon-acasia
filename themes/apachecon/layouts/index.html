@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+
+<html>
+{{ partial "header.html" . }}
+	<body class="homepage">
+
+		<!-- Header Wrapper -->
+			<div class="wrapper style1">
+
+				<div id="header">
+					<div class="container">
+
+							<h1><a href="#" id="logo">&nbsp;</a></h1>
+
+						{{ partial "nav.html" . }}
+
+					</div>
+				</div>
+
+				<div id="banner">
+					<section class="container">
+					</section>
+				</div>
+			</div>
+
+			<div class="wrapper style3">
+				<section class="container">
+                <p><b>{{.Title}}</b></p>
+              {{.Content}}
+				</section>
+			</div>
+
+		{{ partial "footer.html" . }}
+
+	</body>
+</html>

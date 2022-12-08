@@ -1,0 +1,18 @@
+<nav id="nav">
+    <ul>
+        {{ range .Site.Menus.main }}
+        <li>
+            {{ .Pre }}
+            <a href="{{.URL}}">{{ .Name }}</a>
+        </li>
+        {{end}}
+        {{ if .IsTranslated }}
+						{{ range .Translations }}
+            <li>
+							<a href="{{ .URL }}">{{ i18n "translation" }}</a>
+            </li>
+						{{ end}}
+				{{ end }}
+
+    </ul>
+</nav>

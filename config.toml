@@ -1,0 +1,55 @@
+# set the baseURL for CI verification
+baseURL = "/"
+title = "ApacheCon Asia 2022"
+theme = "apachecon"
+# When enabled, creates URL of the form /filename.html instead of /filename/.
+uglyURLs = true
+#hasCJKLanguage = true
+enableRobotsTXT = true
+
+languageCode = "en-us"
+DefaultContentLanguage = "en"
+
+
+
+[params]
+  author = "ALC-Beijing"
+  description = "Welcome to Apache Con Asia 2022"
+  keywords = ["ApacheCon","ApacheConAsia","ApacheConAsia2022"]
+  schedule = ["2022-07-29", "2022-07-30", "2022-07-31"]
+
+[languages.en]
+languageName = "English"
+weight = 1
+
+[languages.zh]
+languageName = "中文"
+weight = 2
+
+disableKinds = ["taxonomy", "taxonomyTerm"]
+
+[markup.goldmark.renderer]
+unsafe = true
+
+# menu for en ((final list includes translated pages from /content)
+[[languages.en.menu.main]]
+name = "Schedule"
+url = "/tracks.html"
+weight = -100
+
+# menu for ZH language (final list includes translated pages from /content)
+
+[[languages.zh.menu.main]]
+name = "会议日程"
+url = "/zh/tracks.html"
+weight = -100
+
+[[languages.en.menu.main]]
+name = "search"
+url = "/search.html"
+weight = 0
+
+[[languages.zh.menu.main]]
+name = "检索"
+url = "/zh/search.html"
+weight = 0
